@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBA - Website Creation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Welcome to the <span class="highlight">CBA</span> Project!</h1>
+        <p>Your solution for quick and simple website creation.</p>
+    </header>
+    <main>
+        <section class="about">
+            <h2>What is the CBA?</h2>
+            <p>The <strong>Coded By Adam</strong> project (CBA) helps students like you get their own website—fast, easy, and affordable.</p>
+        </section>
+        <section class="tiers">
+            <h2>Our Options</h2>
+            <div class="tier">
+                <h3>Bad</h3>
+                <p>Just HTML. No styles. No interactivity.</p>
+                <p><strong>$5</strong></p>
+            </div>
+            <div class="tier">
+                <h3>Meh</h3>
+                <p>HTML + a bit of CSS. Looks okay but nothing too fancy.</p>
+                <p><strong>$10</strong></p>
+            </div>
+            <div class="tier">
+                <h3>Yes</h3>
+                <p>Full HTML, CSS, and JavaScript, plus a feedback feature.</p>
+                <p><strong>$25+</strong></p>
+            </div>
+        </section>
+        <section class="feedback">
+            <h2>Send Us Your Feedback</h2>
+            <form action="https://formsubmit.co/cba-mails@proton.me" method="POST">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                
+                <label for="message">Your Feedback:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your feedback here..." required></textarea>
+                
+                <!-- Add hidden fields for FormSubmit -->
+                <input type="hidden" name="_next" value="https://team-cba.github.io/thank-you.html">
+                <input type="hidden" name="_captcha" value="false">
+                
+                <button type="submit">Send Feedback</button>
+            </form>
+        </section>
+        <section class="contact">
+            <h2>Get Started</h2>
+            <p>Email us at <a href="mailto:cba.project@proton.me">cba.project@proton.me</a> to order your website!</p>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>Made 💻 by a 6th grader. © CBA Project 2025</p>
+    </footer>
+</body>
+</html>
