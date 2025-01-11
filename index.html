@@ -66,6 +66,33 @@
             </div>
         </section>
 
+        <section id="feedback" class="feedback-section">
+            <div class="container">
+                <h2>Feedback</h2>
+                <p>We would love to hear from you! Please share your feedback below.</p>
+                <form action="https://formsubmit.co/cba-mails@proton.me" method="POST" id="feedback-form">
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Feedback:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <!-- Hidden field to prevent submission without proper email -->
+                    <input type="hidden" name="_next" value="thank-you.html">
+                    <input type="hidden" name="_subject" value="New Feedback Submission from CBA Visitor">
+                    <button type="submit" class="btn">Submit Feedback</button>
+                </form>
+            </div>
+        </section>
+        
+        
+
         <!-- Contact Section -->
         <section id="contact" class="contact-section">
             <div class="container">
