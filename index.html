@@ -3,71 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CBA</title>
+    <title>CBA Project</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="main-container">
-        <header>
+    <header>
+        <div class="container">
             <div class="logo">
-                <h1>CBA Project</h1>
+                <h1>CBA</h1>
             </div>
             <nav>
                 <ul>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#tiers">Options</a></li>
-                    <li><a href="#feedback">Feedback</a></li>
+                    <li><a href="#services">Services</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-        </header>
+        </div>
+    </header>
 
-        <section id="about" class="section">
-            <h2>About CBA</h2>
-            <p>The CBA Project helps you create websites quickly and efficiently. Whether you need a simple HTML page or a fully dynamic site with custom features, we have a solution that fits your needs!</p>
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="home-section">
+            <div class="container">
+                <h1>Welcome to the CBA Project</h1>
+                <p>Creating simple and effective websites for everyone!</p>
+                <a href="#services" class="btn">Our Services</a>
+            </div>
         </section>
 
-        <section id="tiers" class="section">
-            <h2>Our Options</h2>
-            <div class="options">
-                <div class="option">
-                    <h3>Bad</h3>
-                    <p>Basic HTML only, no styling or interactivity.</p>
-                    <p><strong>$5</strong></p>
-                </div>
-                <div class="option">
-                    <h3>Meh</h3>
-                    <p>HTML with some basic CSS, no JavaScript.</p>
-                    <p><strong>$10</strong></p>
-                </div>
-                <div class="option">
-                    <h3>Yes</h3>
-                    <p>Full HTML, CSS, JavaScript, with interactive features and feedback options.</p>
-                    <p><strong>$25+</strong></p>
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>The CBA Project is designed to help students create their websites. Whether you're looking for a simple or full-featured site, CBA has you covered!</p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="services">
+                    <div class="service">
+                        <i class="fas fa-code"></i>
+                        <h3>Basic Websites</h3>
+                        <p>Simple HTML websites with no extra features. Great for those just getting started.</p>
+                    </div>
+                    <div class="service">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Intermediate Websites</h3>
+                        <p>Websites with HTML and some CSS. Perfect for those who want to add a little extra flair.</p>
+                    </div>
+                    <div class="service">
+                        <i class="fas fa-cogs"></i>
+                        <h3>Advanced Websites</h3>
+                        <p>Complete websites with HTML, CSS, and JS, plus a feedback system. Ideal for professional-level sites!</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="feedback" class="section">
-            <h2>Send Us Your Feedback</h2>
-            <form action="https://formsubmit.co/cba-mails@proton.me" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Feedback" required></textarea>
-                <input type="hidden" name="_next" value="https://team-cba.github.io/thank-you.html">
-                <input type="hidden" name="_captcha" value="false">
-                <button type="submit">Send Feedback</button>
-            </form>
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Email: <a href="mailto:cba-mails@proton.me">cba-mails@proton.me</a></p>
+            </div>
         </section>
+    </main>
 
-        <section id="contact" class="section">
-            <h2>Contact Us</h2>
-            <p>If you're interested in custom website work, email us at <a href="mailto:cba-mails@proton.me">cba-mails@proton.me</a></p>
-        </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 CBA Project. All rights reserved.</p>
+        </div>
+    </footer>
 
-        <footer>
-            <p>&copy; 2025 CBA Project. Coded by a 6th grader!</p>
-        </footer>
-    </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
