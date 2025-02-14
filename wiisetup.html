@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wii Modding Downloads</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
+        body {
+            background: radial-gradient(circle, #88C7F3, #0055AA);
+            text-align: center;
+            font-family: 'Nunito', sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            text-shadow: 0 0 10px white;
+            margin-top: 20px;
+        }
+
+        .container {
+            margin-top: 30px;
+        }
+
+        .download-btn {
+            display: block;
+            width: 250px;
+            padding: 15px;
+            margin: 15px auto;
+            background: linear-gradient(180deg, #00A2E8, #0078C7);
+            border: 3px solid white;
+            border-radius: 20px;
+            font-size: 1.2em;
+            color: white;
+            text-decoration: none;
+            text-shadow: 0 0 5px black;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+        }
+
+        .wii-remote-cursor {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: url('https://smackstudio.wiki.gg/images/thumb/6/66/Wii_Pointer.png/300px-Wii_Pointer.png') no-repeat center;
+            background-size: contain;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Wii Modding Downloads</h1>
+    
+    <div class="container">
+        <a class="download-btn" href="https://www.mediafire.com/file/mz6wz3sgt7qh9hb/AnyGlobe_Changer.zip/file" download>Download AnyGlobe Changer</a>
+        <a class="download-btn" href="https://www.mediafire.com/file/wf2x9sl9yvz7quo/RMCE01.wbfs/file" download>Download Wifi Patched MKWii</a>
+        <a class="download-btn" href="https://www.mediafire.com/file/wjehh98cuqh9rn7/Forecast_Channel_%255BPAL%255D_%2528WiiLink%2529.wad/file" download>Download Patched Forecast</a>
+
+    <div class="wii-remote-cursor"></div>
+
+    <script>
+        document.addEventListener('mousemove', function(event) {
+            let cursor = document.querySelector('.wii-remote-cursor');
+            cursor.style.left = event.clientX + 'px';
+            cursor.style.top = event.clientY + 'px';
+        });
+    </script>
+
+</body>
+</html>
