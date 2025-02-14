@@ -3,110 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CBA Project</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>CBA - Web Development Services</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-size: 4rem;
+            margin: 50px 0 10px;
+        }
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+        }
+        .customer-slider {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+            padding: 20px 0;
+            background: #111;
+            position: relative;
+        }
+        .customer-slider div {
+            display: flex;
+            animation: scroll 20s linear infinite;
+            gap: 20px;
+        }
+        .customer-slider iframe {
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+            border: none;
+            flex-shrink: 0;
+        }
+        @keyframes scroll {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+        .payment-plans, .feedback-section, .contact-section {
+            margin: 50px auto;
+            max-width: 800px;
+            text-align: left;
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h2 {
+            border-bottom: 2px solid white;
+            padding-bottom: 5px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            background: #333;
+            color: white;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>CBA</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+    <h1>CBA</h1>
+    <p>Providing high-quality web development for students at any level.</p>
+
+    <div class="customer-slider">
+        <div>
+            <iframe src="https://team-cba.github.io/woozy/"></iframe>
+            <iframe src="https://team-cba.github.io/funny-mushroom/"></iframe>
+            <iframe src="https://team-cba.github.io/lavi/"></iframe>
+            <iframe src="https://team-cba.github.io/school-brew/"></iframe>
         </div>
-    </header>
+    </div>
 
-    <main>
-        <!-- Home Section -->
-        <section id="home" class="home-section">
-            <div class="container">
-                <h1>Welcome to the CBA Project</h1>
-                <p>Creating simple and effective websites for everyone!</p>
-                <a href="#services" class="btn">Our Services</a>
-            </div>
-        </section>
+    <div class="payment-plans">
+        <h2>Payment Plans*</h2>
+        <ul>
+            <li>Basic Website - $0 IQD</li>
+            <li>Standard Website - $5000 IQD</li>
+            <li>Advanced Website - $10000 IQD</li>
+           <li>*As of 6th of April, 2025. We are taking the prices up, buy a site while you can.</li>
+        </ul>
+    </div>
 
-        <!-- About Section -->
-        <section id="about" class="about-section">
-            <div class="container">
-                <h2>About Us</h2>
-                <p>The CBA Project is designed to help students create their websites. Whether you're looking for a simple or full-featured site, CBA has you covered!</p>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section id="services" class="services-section">
-            <div class="container">
-                <h2>Our Services</h2>
-                <div class="services">
-                    <div class="service">
-                        <i class="fas fa-code"></i>
-                        <h3>Basic Websites</h3>
-                        <p>Simple HTML websites with no extra features. Great for those just getting started.</p>
-                    </div>
-                    <div class="service">
-                        <i class="fas fa-laptop-code"></i>
-                        <h3>Intermediate Websites</h3>
-                        <p>Websites with HTML and some CSS. Perfect for those who want to add a little extra flair.</p>
-                    </div>
-                    <div class="service">
-                        <i class="fas fa-cogs"></i>
-                        <h3>Advanced Websites</h3>
-                        <p>Complete websites with HTML, CSS, and JS, plus a feedback system. Ideal for professional-level sites!</p>
-                    </div>
+    <section id="feedback" class="feedback-section">
+        <div class="container">
+            <h2>Feedback</h2>
+            <p>We would love to hear from you! Please share your feedback below.</p>
+            <form action="https://formsubmit.co/cba-mails@proton.me" method="POST" id="feedback-form">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
                 </div>
-            </div>
-        </section>
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Feedback:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <input type="hidden" name="_subject" value="New Feedback Submission from CBA Visitor">
+                <button type="submit" class="btn">Submit Feedback</button>
+            </form>
+        </div>
+    </section>
 
-        <section id="feedback" class="feedback-section">
-            <div class="container">
-                <h2>Feedback</h2>
-                <p>We would love to hear from you! Please share your feedback below.</p>
-                <form action="https://formsubmit.co/cba-mails@proton.me" method="POST" id="feedback-form">
-                    <div class="form-group">
-                        <label for="name">Your Name:</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Your Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Your Feedback:</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <!-- Hidden field to prevent submission without proper email -->
-                    <input type="hidden" name="_subject" value="New Feedback Submission from CBA Visitor">
-                    <button type="submit" class="btn">Submit Feedback</button>
-                </form>
-            </div>
-        </section>
-        
-        
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact-section">
-            <div class="container">
-                <h2>Contact Us</h2>
-                <p>Email: <a href="mailto:cba-mails@proton.me">cba-mails@proton.me</a></p>
-            </div>
-        </section>
-    </main>
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:cba-mails@proton.me">cba-mails@proton.me</a></p>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
             <p>&copy; 2025 CBA Project. All rights reserved.</p>
         </div>
     </footer>
-
-    <script src="scripts.js"></script>
 </body>
 </html>
